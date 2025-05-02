@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "TQ6oCnxWeO1f7kc4p0VQP6ukxH6CWqMsNqxOhVjV/ag=",
+  "Source": "DoctorConsultent_API",
+  "BasePath": "_content/DoctorConsultent_API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "DoctorConsultent_API\\wwwroot",
+      "Source": "DoctorConsultent_API",
+      "ContentRoot": "C:\\Users\\eAppl\\OneDrive\\Desktop\\eA\\myProjects\\DoctorConsultent_API\\DoctorConsultent_API\\wwwroot\\",
+      "BasePath": "_content/DoctorConsultent_API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
