@@ -80,3 +80,13 @@ C:\Users\eAppl\OneDrive\Desktop\eA\myProjects\DoctorConsultent_API\DoctorConsult
 C:\Users\eAppl\OneDrive\Desktop\eA\myProjects\DoctorConsultent_API\DoctorConsultent_API\obj\Release\net6.0\DoctorConsultent_API.genruntimeconfig.cache
 C:\Users\eAppl\OneDrive\Desktop\eA\myProjects\DoctorConsultent_API\DoctorConsultent_API\obj\Release\net6.0\ref\DoctorConsultent_API.dll
 C:\Users\eAppl\OneDrive\Desktop\eA\myProjects\DoctorConsultent_API\DoctorConsultent_API\bin\Release\net6.0\DoctorConsultent_API.staticwebassets.runtime.json
+C:\Users\eAppl\OneDrive\Desktop\eA\myProjects\Deployment\DoctorConsultent_API\DoctorConsultent_API\obj\Release\net6.0\DoctorConsultent_API.csproj.AssemblyReference.cache
+C:\Users\eAppl\OneDrive\Desktop\eA\myProjects\Deployment\DoctorConsultent_API\DoctorConsultent_API\obj\Release\net6.0\DoctorConsultent_API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eAppl\OneDrive\Desktop\eA\myProjects\Deployment\DoctorConsultent_API\DoctorConsultent_API\obj\Release\net6.0\DoctorConsultent_API.AssemblyInfoInputs.cache
+C:\Users\eAppl\OneDrive\Desktop\eA\myProjects\Deployment\DoctorConsultent_API\DoctorConsultent_API\obj\Release\net6.0\DoctorConsultent_API.AssemblyInfo.cs
+C:\Users\eAppl\OneDrive\Desktop\eA\myProjects\Deployment\DoctorConsultent_API\DoctorConsultent_API\obj\Release\net6.0\DoctorConsultent_API.csproj.CoreCompileInputs.cache
+C:\Users\eAppl\OneDrive\Desktop\eA\myProjects\Deployment\DoctorConsultent_API\DoctorConsultent_API\obj\Release\net6.0\DoctorConsultent_API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\eAppl\OneDrive\Desktop\eA\myProjects\Deployment\DoctorConsultent_API\DoctorConsultent_API\obj\Release\net6.0\DoctorConsultent_API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\eAppl\OneDrive\Desktop\eA\myProjects\Deployment\DoctorConsultent_API\DoctorConsultent_API\obj\Release\net6.0\DoctorConsultent_API.dll
+C:\Users\eAppl\OneDrive\Desktop\eA\myProjects\Deployment\DoctorConsultent_API\DoctorConsultent_API\obj\Release\net6.0\refint\DoctorConsultent_API.dll
+C:\Users\eAppl\OneDrive\Desktop\eA\myProjects\Deployment\DoctorConsultent_API\DoctorConsultent_API\obj\Release\net6.0\DoctorConsultent_API.pdb

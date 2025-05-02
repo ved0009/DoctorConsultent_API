@@ -10475,11 +10475,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\eAppl\\OneDrive\\Desktop\\eA\\myProjects\\DoctorConsultent_API\\DoctorConsultent_API\\DoctorConsultent_API.csproj",
+      "projectUniqueName": "C:\\Users\\eAppl\\OneDrive\\Desktop\\eA\\myProjects\\Deployment\\DoctorConsultent_API\\DoctorConsultent_API\\DoctorConsultent_API.csproj",
       "projectName": "DoctorConsultent_API",
-      "projectPath": "C:\\Users\\eAppl\\OneDrive\\Desktop\\eA\\myProjects\\DoctorConsultent_API\\DoctorConsultent_API\\DoctorConsultent_API.csproj",
+      "projectPath": "C:\\Users\\eAppl\\OneDrive\\Desktop\\eA\\myProjects\\Deployment\\DoctorConsultent_API\\DoctorConsultent_API\\DoctorConsultent_API.csproj",
       "packagesPath": "C:\\Users\\eAppl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\eAppl\\OneDrive\\Desktop\\eA\\myProjects\\DoctorConsultent_API\\DoctorConsultent_API\\obj\\",
+      "outputPath": "C:\\Users\\eAppl\\OneDrive\\Desktop\\eA\\myProjects\\Deployment\\DoctorConsultent_API\\DoctorConsultent_API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\eAppl\\AppData\\Roaming\\NuGet\\NuGet.Config",
