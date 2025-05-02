@@ -24,6 +24,7 @@ builder.Services.AddScoped(typeof(IRazorPay), typeof(SRazorPay));
 builder.Services.AddScoped(typeof(ISendEmail), typeof(SSendEmail));
 builder.Services.AddScoped(typeof(SPdfService), typeof(SPdfService));
 builder.Services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
+builder.WebHost.UseUrls("http://0.0.0.0:" + (Environment.GetEnvironmentVariable("PORT") ?? "5000"));
 
 builder.Services.AddCors(options =>
 {
