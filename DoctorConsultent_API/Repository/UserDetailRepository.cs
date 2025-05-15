@@ -3,6 +3,7 @@ using DoctorConsultent_API.Context;
 using DoctorConsultent_API.Helper;
 using DoctorConsultent_API.IRepository;
 using DoctorConsultent_API.Models.Appointment;
+using static Raven.Database.Server.Controllers.StreamsController.StreamQueryContent;
 
 namespace DoctorConsultent_API.Repository
 {
@@ -10,6 +11,8 @@ namespace DoctorConsultent_API.Repository
     {
         private readonly DapperContext _context;
         private const string SP_INSERTUPDUSERDETAIL = "sp_insertUpdUserDetail";
+        private const string USP_GETUSERSFORCONSULTATION = "usp_GetUsersForConsultation";
+     
 
 
         public UserDetailRepository(DapperContext dapperDBContext)
@@ -30,6 +33,14 @@ namespace DoctorConsultent_API.Repository
                 proc_parameters.Add("@MobileNumber", inputParameters.MobileNumber);
                 proc_parameters.Add("@UserType", inputParameters.UserType);
                 proc_parameters.Add("@Symptom", inputParameters.Symptom);
+                proc_parameters.Add("@Amount", inputParameters.Amount);
+                proc_parameters.Add("@PaymentMethod", inputParameters.PaymentMethod);
+                proc_parameters.Add("@TransStatus", inputParameters.TransactionStatus);
+                proc_parameters.Add("@PaymentId", inputParameters.PaymentId);
+                proc_parameters.Add("@Bank", inputParameters.Bank);
+                proc_parameters.Add("@TransactionFee", inputParameters.TransactionFee);
+                proc_parameters.Add("@TransactionTax", inputParameters.TransactionTax);
+
 
 
 
@@ -45,6 +56,22 @@ namespace DoctorConsultent_API.Repository
                 return new List<int>();
             }
            
+        }
+
+        public async Task<IEnumerable<getPatientsListOutput>> getPatientsDetail()
+        {
+            try
+            {
+                using (var connection = _context.CreateConnection())
+                {
+                    var result = await connection.QueryAsync<getPatientsListOutput>(USP_GETUSERSFORCONSULTATION, null, null, Constants.TIMEOUT, System.Data.CommandType.StoredProcedure);
+                    return result.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                return new List<getPatientsListOutput>();
+            }
         }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using DoctorConsultent_API.IServices;
 using Razorpay.Api;
+using Newtonsoft.Json;
+using DoctorConsultent_API.Models.Appointment;
 
 namespace DoctorConsultent_API.Services
 {
@@ -33,6 +35,37 @@ namespace DoctorConsultent_API.Services
             catch (Exception ex)
             {
                 throw new Exception("Error while creating order: " + ex.Message);
+            }
+        }
+
+        public Task<string> GetPaymentDetails(string paymentId)
+        {
+            try
+            {
+                RazorpayClient client = new RazorpayClient(_key, _secret);
+                Payment payment = client.Payment.Fetch(paymentId);
+
+                var paymentDetails = new Dictionary<string, object>
+        {
+            { "id", payment["id"] },
+            { "method", payment["method"] },
+            { "status", payment["status"] },
+            { "bank", payment.Attributes.ContainsKey("bank") ? payment["bank"] : null },
+            { "wallet", payment.Attributes.ContainsKey("wallet") ? payment["wallet"] : null },
+            { "email", payment.Attributes.ContainsKey("email") ? payment["email"] : null },
+            { "contact", payment.Attributes.ContainsKey("contact") ? payment["contact"] : null },
+            { "amount", payment["amount"] },
+            { "fee", payment.Attributes.ContainsKey("fee") ? payment["fee"] : null },
+            { "tax", payment.Attributes.ContainsKey("tax") ? payment["tax"] : null },
+            { "created_at", payment["created_at"] }
+        };
+
+                string json = JsonConvert.SerializeObject(paymentDetails); // Convert to JSON string
+                return Task.FromResult(json);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error fetching payment details: " + ex.Message);
             }
         }
     }

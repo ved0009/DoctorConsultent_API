@@ -47,25 +47,7 @@ namespace DoctorConsultent_API.Services
                     mail.Body = GetThankYouEmail(request.CustomerName);
                     mail.IsBodyHtml = true;
 
-                    // Generate PDF
-                    var htmlToPdf = new HtmlToPdfDocument()
-                    {
-                        GlobalSettings = {
-                    PaperSize = PaperKind.A4,
-                    Orientation = Orientation.Portrait
-                },
-                        Objects = {
-                    new ObjectSettings() {
-                        HtmlContent = request.InvoiceHtml
-                    }
-                }
-                    };
-                    byte[] pdfBytes = _pdfConverter.Convert(htmlToPdf);
-
-                    // Attach PDF
-                    mail.Attachments.Add(new Attachment(new MemoryStream(pdfBytes), "Invoice.pdf"));
-
-                    using (SmtpClient smtp = new SmtpClient(smtpClient, smtpPort))
+                  using (SmtpClient smtp = new SmtpClient(smtpClient, smtpPort))
                     {
                         smtp.Credentials = new NetworkCredential(smtpUserName, smtpPassword);
                         smtp.EnableSsl = enableSSL;

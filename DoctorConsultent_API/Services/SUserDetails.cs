@@ -1,6 +1,7 @@
 ﻿using DoctorConsultent_API.IRepository;
 using DoctorConsultent_API.IServices;
 using DoctorConsultent_API.Models.Appointment;
+using static Raven.Database.Server.Controllers.StreamsController.StreamQueryContent;
 
 namespace DoctorConsultent_API.Services
 {
@@ -12,6 +13,11 @@ namespace DoctorConsultent_API.Services
         {
             _userDetailsrepositpry = userDetailsrepositpry;
             _configuration = configuration;
+        }
+
+        public async Task<IEnumerable<getPatientsListOutput>> getPatientsDetail()
+        {
+            return await _userDetailsrepositpry.getPatientsDetail();
         }
 
         public async Task<IEnumerable<int>> insertUpduserDetails(insertUpduserDetailsInput inputParameters)

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\eAppl\\OneDrive\\Desktop\\eA\\myProjects\\Deployment\\DoctorConsultent_API\\DoctorConsultent_API\\DoctorConsultent_API.csproj": {}
+    "C:\\Users\\eAppl\\OneDrive\\Desktop\\eA\\myProjects\\DoctorConsultent_API\\DoctorConsultent_API\\DoctorConsultent_API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\eAppl\\OneDrive\\Desktop\\eA\\myProjects\\Deployment\\DoctorConsultent_API\\DoctorConsultent_API\\DoctorConsultent_API.csproj": {
+    "C:\\Users\\eAppl\\OneDrive\\Desktop\\eA\\myProjects\\DoctorConsultent_API\\DoctorConsultent_API\\DoctorConsultent_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eAppl\\OneDrive\\Desktop\\eA\\myProjects\\Deployment\\DoctorConsultent_API\\DoctorConsultent_API\\DoctorConsultent_API.csproj",
+        "projectUniqueName": "C:\\Users\\eAppl\\OneDrive\\Desktop\\eA\\myProjects\\DoctorConsultent_API\\DoctorConsultent_API\\DoctorConsultent_API.csproj",
         "projectName": "DoctorConsultent_API",
-        "projectPath": "C:\\Users\\eAppl\\OneDrive\\Desktop\\eA\\myProjects\\Deployment\\DoctorConsultent_API\\DoctorConsultent_API\\DoctorConsultent_API.csproj",
+        "projectPath": "C:\\Users\\eAppl\\OneDrive\\Desktop\\eA\\myProjects\\DoctorConsultent_API\\DoctorConsultent_API\\DoctorConsultent_API.csproj",
         "packagesPath": "C:\\Users\\eAppl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eAppl\\OneDrive\\Desktop\\eA\\myProjects\\Deployment\\DoctorConsultent_API\\DoctorConsultent_API\\obj\\",
+        "outputPath": "C:\\Users\\eAppl\\OneDrive\\Desktop\\eA\\myProjects\\DoctorConsultent_API\\DoctorConsultent_API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\eAppl\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -49,9 +49,17 @@
               "target": "Package",
               "version": "[1.0.8, )"
             },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.35, )"
+            },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[5.2.2, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.35.0, )"
             },
             "Microsoft.TeamFoundationServer.ExtendedClient": {
               "target": "Package",
@@ -74,14 +82,6 @@
               "version": "[6.2.3, )"
             },
             "System.Security.Permissions": {
-              "target": "Package",
-              "version": "[6.0.0, )"
-            },
-            "itext7": {
-              "target": "Package",
-              "version": "[9.1.0, )"
-            },
-            "itext7.pdfhtml": {
               "target": "Package",
               "version": "[6.0.0, )"
             }

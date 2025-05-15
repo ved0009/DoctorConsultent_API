@@ -15,6 +15,10 @@ namespace DoctorConsultent_API.Controllers
 
             _razorpayServices = razorpayServices;
         }
+        public class PaymentRequestDto
+        {
+            public string PaymentId { get; set; }
+        }
 
 
         [HttpPost("MakePayment")]
@@ -31,5 +35,20 @@ namespace DoctorConsultent_API.Controllers
                 return Ok(OutputResponse.GenerateOutput(orderId, "Order created successfully", 0, 0));
             }
         }
+        [HttpPost("GetDetails")]
+        public async Task<IActionResult> GetPaymentDetails([FromBody] string paymentId)
+        {
+            string paymentDetailsJson = await _razorpayServices.GetPaymentDetails(paymentId); // Get details as JSON string
+
+            if (string.IsNullOrEmpty(paymentDetailsJson))
+            {
+                return Ok(OutputResponse.GenerateOutput(new List<object>(), "Failed to fetch payment details", 0, 0));
+            }
+            else
+            {
+                return Ok(OutputResponse.GenerateOutput(paymentDetailsJson, "Payment details fetched successfully", 0, 0));
+            }
+        }
+
     }
 }
