@@ -44,6 +44,7 @@ namespace DoctorConsultent_API.Repository
 
 
 
+
                 using (var connection = _context.CreateConnection())
                 {
                     var result = await connection.QueryAsync<int>(SP_INSERTUPDUSERDETAIL, proc_parameters, null, Constants.TIMEOUT, System.Data.CommandType.StoredProcedure);

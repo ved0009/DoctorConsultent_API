@@ -17,6 +17,7 @@ namespace DoctorConsultent_API.Models.Appointment
         public String Bank { get; set; }
         public Decimal TransactionFee { get; set; }
         public Decimal TransactionTax { get; set; }
+        
 
 
     }

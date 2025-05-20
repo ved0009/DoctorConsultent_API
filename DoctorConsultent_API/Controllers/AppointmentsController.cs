@@ -11,7 +11,7 @@ namespace DoctorConsultent_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+   
     public class AppointmentsController : ControllerBase
     {
         private IUserDetails _userDetails;
