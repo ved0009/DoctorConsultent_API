@@ -6,5 +6,7 @@ namespace DoctorConsultent_API.IRepository
     {
         Task<IEnumerable<getPatientsListOutput>> getPatientsDetail();
         Task<IEnumerable<int>> insertUpduserDetails(insertUpduserDetailsInput inputParameters);
+        Task<List<getScheduleCallOutput>> getScheduleCallDetails(getScheduleCallInput InputParameters);
+
     }
 }

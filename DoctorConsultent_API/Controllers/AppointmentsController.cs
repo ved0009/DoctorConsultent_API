@@ -60,5 +60,21 @@ namespace DoctorConsultent_API.Controllers
             }
         }
 
+
+        [HttpPost(nameof(getScheduleCallDetails))]
+        public async Task<IActionResult> getScheduleCallDetails([FromBody()] getScheduleCallInput inputParameters)
+        {
+            var obj = await _userDetails.getScheduleCallDetails(inputParameters);
+            if (obj == null)
+            {
+                List<object> list = new List<object>();
+                IEnumerable<object> en = list;
+                return NotFound(OutputResponse.GenerateOutput(en, "", 0, 0));
+            }
+            else
+            {
+                return Ok(OutputResponse.GenerateOutput(obj, "", 0, 0));
+            }
+        }
     }
 }

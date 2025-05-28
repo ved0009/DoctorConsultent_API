@@ -35,6 +35,8 @@ namespace DoctorConsultent_API.Controllers
                 return Ok(OutputResponse.GenerateOutput(obj, "", 0, 0));
             }
         }
+     
+        
         [HttpGet(nameof(PatientsLists))]
         public async Task<IActionResult> PatientsLists()
         {

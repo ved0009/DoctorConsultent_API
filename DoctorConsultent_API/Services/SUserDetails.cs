@@ -20,6 +20,11 @@ namespace DoctorConsultent_API.Services
             return await _userDetailsrepositpry.getPatientsDetail();
         }
 
+        public async Task<List<getScheduleCallOutput>> getScheduleCallDetails(getScheduleCallInput InputParameters)
+        {
+            return await _userDetailsrepositpry.getScheduleCallDetails(InputParameters);
+        }
+
         public async Task<IEnumerable<int>> insertUpduserDetails(insertUpduserDetailsInput inputParameters)
         {
             return await _userDetailsrepositpry.insertUpduserDetails(inputParameters);

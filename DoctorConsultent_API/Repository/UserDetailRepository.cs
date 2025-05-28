@@ -12,7 +12,9 @@ namespace DoctorConsultent_API.Repository
         private readonly DapperContext _context;
         private const string SP_INSERTUPDUSERDETAIL = "sp_insertUpdUserDetail";
         private const string USP_GETUSERSFORCONSULTATION = "usp_GetUsersForConsultation";
-     
+        private const string USP_GETSCHEDULECALLDETAILS = "usp_getScheduleCallDetails";
+
+
 
 
         public UserDetailRepository(DapperContext dapperDBContext)
@@ -72,6 +74,27 @@ namespace DoctorConsultent_API.Repository
             catch (Exception ex)
             {
                 return new List<getPatientsListOutput>();
+            }
+        }
+
+        public async Task<List<getScheduleCallOutput>> getScheduleCallDetails(getScheduleCallInput InputParameters)
+        {
+            try
+            {
+
+                var proc_parameters = new DynamicParameters();
+                proc_parameters.Add("@MobileNo", InputParameters.MobileNo);
+                
+                using (var connection = _context.CreateConnection())
+                {
+                    var result = await connection.QueryAsync<getScheduleCallOutput>(USP_GETSCHEDULECALLDETAILS, proc_parameters, null, Constants.TIMEOUT, System.Data.CommandType.StoredProcedure);
+                    return result.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                return new List<getScheduleCallOutput>();
             }
         }
     }
